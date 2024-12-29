@@ -1,8 +1,8 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+* Copyright (c) 2020 The ZMK Contributors
+*
+* SPDX-License-Identifier: MIT
+*/
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -25,58 +25,27 @@
             quick-tap-ms = <175>;
         };
     };
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
-// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
-// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
-//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
-                        display-name = "Base";
-                        bindings = <
-// ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp Q         &kp W         &kp E         &kp R         &kp T              &kp Y         &kp U         &kp I         &kp O         &kp P
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &hm LALT A    &hm LSHFT S   &hm LGUI D    &kp LCTL F    &kp G              &kp H         &hm RCTL J    &hm RGUI K    &hm RSHFT L   &hm RALT SQT
-// ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp LCTL      &kp RALT      &kp DOT
-// ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                &kp LGUI      &mo TAB       &kp SPACE          &kp RET       &kp BSPC      &kp DEL
-//                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
-                        >;
-                };
-
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
-// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
-// | BTCLR |     |     |     |     |     |     |     |     |     |     |
-//               | GUI |     | SPC |     | ENT | ESC | TAB |
-                        display-name = "Lower";
-                        bindings = <
-   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
-   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
-                             &kp LGUI     &trans       &kp SPACE        &kp RET   &kp ESC   &kp TAB
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
-// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
-// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
-//            | GUI | ESC | SPC |     | ENT |     | TAB |
-                        display-name = "Raise";
-                        bindings = <
-
-   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5        &kp N6    &kp N7    &kp N8    &kp N9   &kp N0
-   &kp MINUS &kp EQUAL &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  &kp FSLH &kp BSLH
-   &kp GRAVE &trans    &trans    &kp COMMA &kp COLON     &kp SEMI  &kp DOT   &kp LCTRL &kp RALT &trans
-                       &kp LGUI  &kp ESC   &kp SPACE     &kp RET   &trans    &kp TAB
-                        >;
-                };
+        default_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
+            // |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
+            // |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
+            //             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+            display-name = "Base";
+            bindings = <
+                // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+                    &kp Q         &kp W         &kp E         &kp R         &kp T              &kp Y         &kp U         &kp I         &kp O         &kp P
+                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                    &hm LALT A    &hm LSHFT S   &hm LGUI D    &hm LCTL F    &kp G              &kp H         &hm RCTL J    &hm RGUI K    &hm RSHFT L   &hm RALT SQT
+                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+                    &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp LCTL      &kp RALT      &kp DOT
+                // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
+                                                &kp LGUI      &mo TAB       &kp SPACE          &kp RET       &kp BSPC      &kp DEL
+                //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
+            >;
         };
+    };
 };

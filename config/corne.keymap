@@ -21,8 +21,8 @@
 
             flavor = "balanced";
             tapping-term-ms = <280>;
-            require-prior-idle-ms = <150>;
-            quick-tap-ms = <175>;
+            require-prior-idle-ms = <175>;
+            quick-tap-ms = <215>;
         };
     };
 
@@ -63,7 +63,7 @@
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     &trans        &trans        &trans        &trans        &trans             &kp GRAVE     &kp FSLH      &kp BSLH      &trans        &trans
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &hm LALT STAR &hm LSHFT LT  &hm LGUI GT   &hm LCTL AMPS &kp UNDER          &kp LPAR      &hm RCTL RPAR &hm RGUI LBKT &hm RSHFT RBKT&hm RALT N0
+                    &hm LALT STAR &hm LSHFT LT  &hm LGUI GT   &hm LCTL AMPS &kp UNDER          &kp LPAR      &hm RCTL RPAR &hm RGUI LBKT &hm RSHFT RBKT&hm RALT SQT
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯

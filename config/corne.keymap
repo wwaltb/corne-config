@@ -28,7 +28,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
         base_layer {
             // qwerty with homerow mods
             display-name = "Base";
@@ -40,33 +39,31 @@
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp SQT
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                &kp ESC       &kp TAB       &lt 1 SPACE        &lt 2 RET     &kp BSPC      &kp DEL
+                                                &kp ESC       &kp TAB       &lt 2 SPACE        &lt 1 RET     &kp BSPC      &kp DEL
                 //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
             >;
         };
-
         number_layer {
             display-name = "Number";
             bindings = <
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    &trans        &trans        &trans        &trans        &trans             &kp EQUAL     &kp MINUS     &kp PLUS      &trans        &trans
+                    &trans        &trans        &kp EQUAL     &kp MINUS     &kp PLUS           &trans        &trans        &trans        &trans        &trans
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &hm LALT N1   &hm LSHFT N2  &hm LGUI N3   &hm LCTL N4   &kp N5             &kp N6        &hm RCTL N7   &hm RGUI N8   &hm RSHFT N9  &hm RALT N0
-                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├────────── ───┼─────────────┼─────────────┼─────────────┼─────────────┤
+                // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
                                                 &trans        &trans        &trans             &trans        &trans        &trans
                 //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
             >;
         };
-
         symbol_layer {
             display-name = "Symbol";
             bindings = <
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                    &trans        &trans        &trans        &trans        &trans             &kp EQUAL     &kp MINUS     &kp PLUS      &trans        &trans
+                    &trans        &trans        &trans        &trans        &trans             &kp GRAVE     &kp FSLH      &kp BSLH      &trans        &trans
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &hm LALT N1   &hm LSHFT N2  &hm LGUI N3   &hm LCTL N4   &kp N5             &kp N6        &hm RCTL N7   &hm RGUI N8   &hm RSHFT N9  &hm RALT N0
+                    &hm LALT STAR &hm LSHFT LT  &hm LGUI GT   &hm LCTL AMPS &kp UNDER          &kp LPAR      &hm RCTL RPAR &hm RGUI LBKT &hm RSHFT RBKT&hm RALT N0
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
@@ -83,6 +80,11 @@
             timeout-ms = <80>;
             key-positions = <32 33>;
             bindings = <&kp ESC>;
+        };
+        combo_caps {
+            timeout-ms = <80>;
+            key-positions = <11 18>;
+            bindings = <&kp CAPS>;
         };
     };
 };

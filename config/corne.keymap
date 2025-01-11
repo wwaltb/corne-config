@@ -27,7 +27,7 @@
         tl: thumb_layers {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            bindings = <&mt>, <&kp>;
+            bindings = <&mo>, <&kp>;
 
             flavor = "balanced";
             tapping-term-ms = <420>;

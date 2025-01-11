@@ -20,9 +20,19 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <280>;
-            require-prior-idle-ms = <175>;
-            quick-tap-ms = <280>;
+            tapping-term-ms = <360>;
+            require-prior-idle-ms = <180>;
+            quick-tap-ms = <320>;
+        };
+        tl: thumb_layers {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mt>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <420>;
+            require-prior-idle-ms = <180>;
+            quick-tap-ms = <380>;
         };
     };
 
@@ -37,9 +47,9 @@
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &hm LALT A    &hm LSHFT S   &hm LGUI D    &hm LCTL F    &kp G              &kp H         &hm RCTL J    &hm RGUI K    &hm RSHFT L   &hm RALT SEMI
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                    &kp Z         &kp X         &kp C         &kp V         &kp B              &kp N         &kp M         &kp COMMA     &kp DOT       &kp SQT
+                    &kp Z         &kp X         &kp SQT       &kp C         &kp V              &kp B         &kp N         &kp M         &kp COMMA     &kp DOT
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                &kp ESC       &kp TAB       &lt 2 SPACE        &lt 1 RET     &kp BSPC      &lt 3 DEL
+                                                &kp ESC       &kp TAB       &tl 2 SPACE        &tl 1 RET     &kp BSPC      &tl 3 DEL
                 //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -72,7 +82,7 @@
             >;
         };
         bt_layer {
-            display-name = "Bluetooth";
+            display-name = "Bluetuth";
             bindings = <
                 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮    ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
                     &trans        &trans        &trans        &trans        &bt BT_CLR         &trans        &trans        &trans        &trans        &trans

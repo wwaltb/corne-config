@@ -9,10 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    chosen {
-        zmk,matrix-transform = &five_column_transform;
-    };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";

@@ -74,27 +74,17 @@
     * Input Listener Config
     */
 
-    &mouse_ps2_input_listener {
-
-      // Adjust pointing device axes.
-      // This adjusts the values inside the zmk driver. Some
-      // trackpoints also allow you to adjust it in their firmware. Check
-      // the driver options below for more info.
-      // xy-swap;
-      // x-invert;
-      // y-invert;
-
-      // Set the layer that should automatically activate when the mouse is
-      // moving.
-      layer-toggle = <MOUSE_TP>;
-
-      // How long the mouse needs to move for before the layer is activated (to
-      // avoid accidental activations while typing) (Default: 250)
-      layer-toggle-delay-ms = <250>;
-
-      // How long to wait, after the last mouse movement, before deactivating
-      // the layer (Default: 250)
-      layer-toggle-timeout-ms = <250>;
+    &trackpoint_listener {
+        input-processors = 
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>
+            , <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
+            , <&zip_temp_layer 1 500>
+            ;
+        scroller {
+            layers = <9>;
+            //process-next;
+            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 16>,<&zip_xy_to_scroll_mapper>;
+        };
     };
 
 
@@ -170,10 +160,6 @@
     // block, which prevents compilation and potential build errors when we
     // undefine HAS_MOUSE_TP in corne_tp.keymap
     &mouse_ps2  {
-      status = "okay";
-    };
-
-    &mouse_ps2_input_listener {
       status = "okay";
     };
 

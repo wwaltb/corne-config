@@ -6,11 +6,23 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
+#include <layouts/foostan/corne/5column.dtsi>
+#include <layouts/foostan/corne/6column.dtsi>
+
+
+&foostan_corne_6col_layout {
+    transform = <&default_transform>;
+};
+
+&foostan_corne_5col_layout {
+    transform = <&five_column_transform>;
+};
+
 / {
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix-transform = &five_column_transform;
+        zmk,physical-layout = &foostan_corne_6col_layout;
     };
 
     default_transform: keymap_transform_0 {

@@ -4,29 +4,46 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: infused-kim
       url-base: https://github.com/infused-kim
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: urob
+      url-base: https://github.com/urob
     - name: m165437
       url-base: https://github.com/M165437
 
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
+
+    #
+    # zmk fork
+    #
+
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
 
     # infused-kim's zmk fork with mouse PR, which might be a bit outdated, but
     # is known to be compatible with the PS/2 mouse & TP driver module.
-    - name: zmk
-      remote: infused-kim
-      revision: pr-testing/mouse_ps2_module_base
-      import: app/west.yml
+    # - name: zmk
+    #   remote: infused-kim
+    #   revision: pr-testing/mouse_ps2_module_base
+    #   import: app/west.yml
+
+    #
+    # zmk modules
+    #
 
     # Module for PS/2 mouse & TP driver
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
+      remote: badjeff
       revision: main
     # Module for gem display
     - name: nice-view-gem
       remote: m165437
+      revision: main
+      # Not sure this is needed:
+    - name: zmk-helpers
+      remote: urob
       revision: main
 
   self:

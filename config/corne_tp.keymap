@@ -9,6 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";

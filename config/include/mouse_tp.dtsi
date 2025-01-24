@@ -74,18 +74,18 @@
     * Input Listener Config
     */
 
-    &trackpoint_listener {
-        input-processors = 
-            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>
-            , <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
-            , <&zip_temp_layer 1 500>
-            ;
-        scroller {
-            layers = <9>;
-            //process-next;
-            input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 16>,<&zip_xy_to_scroll_mapper>;
-        };
-    };
+    // &trackpoint_listener {
+    //     input-processors = 
+    //         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>
+    //         , <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>
+    //         , <&zip_temp_layer 1 500>
+    //         ;
+    //     scroller {
+    //         layers = <9>;
+    //         //process-next;
+    //         input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,<&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,<&zip_xy_scaler 1 16>,<&zip_xy_to_scroll_mapper>;
+    //     };
+    // };
 
 
    /*

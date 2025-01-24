@@ -435,9 +435,9 @@
     #undef MOUSE_PS2_PIN_SDA_PRO_MICRO
     #undef MOUSE_PS2_PIN_SDA_PINCTRL
 
-    #define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 1 GPIO_ACTIVE_HIGH>
-    #define MOUSE_PS2_PIN_SDA_PRO_MICRO <&pro_micro 0 GPIO_ACTIVE_HIGH>
-    #define MOUSE_PS2_PIN_SDA_PINCTRL <NRF_PSEL(UART_RX, 0, 8)>
+    #define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 3 GPIO_ACTIVE_HIGH>
+    #define MOUSE_PS2_PIN_SDA_PRO_MICRO <&pro_micro 2 GPIO_ACTIVE_HIGH>
+    #define MOUSE_PS2_PIN_SDA_PINCTRL <NRF_PSEL(UART_RX, 0, 17)>
 #endif
 
 // This define can be used in the keymap file to check whether the device tree

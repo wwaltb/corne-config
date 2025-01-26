@@ -106,8 +106,8 @@
       //scroll-accelerator = <&input_accelerator_scroll>; 
       // set the layer that will change the mouse behavior from move to scroll
       // when active
-      scroll-layers = <SCROLL>; 
-      scroll-layers-reverse-direction-horizontal; 
+      //scroll-layers = <SCROLL>; 
+      //scroll-layers-reverse-direction-horizontal; 
       // xy-swap; 
       // x-invert; 
       // y-invert; 

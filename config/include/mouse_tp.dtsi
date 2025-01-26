@@ -102,7 +102,7 @@
     */
     
     &mouse_ps2_input_listener { 
-      //move-accelerator = <&input_accelerator_move>; 
+      move-accelerator = <&input_accelerator_move>; 
       //scroll-accelerator = <&input_accelerator_scroll>; 
       // set the layer that will change the mouse behavior from move to scroll
       // when active

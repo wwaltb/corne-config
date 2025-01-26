@@ -88,10 +88,10 @@
       layer-toggle = <MOUSE>; 
       // How long the mouse needs to move for before the layer is activated (to 
       // avoid accidental activations while typing) (Default: 250) 
-      layer-toggle-delay-ms = <250>; 
+      layer-toggle-delay-ms = <25>; 
       // How long to wait, after the last mouse movement, before deactivating 
       // the layer (Default: 250) 
-      layer-toggle-timeout-ms = <250>; 
+      layer-toggle-timeout-ms = <500>; 
     };
 
    /*
@@ -101,7 +101,7 @@
     &mouse_ps2 {
 
       // How sensitive the TP is (Default: 128)
-      tp-sensitivity = <128>;
+      tp-sensitivity = <255>;
 
 
       // The maximum mouse movement speed the TP will accelarate to

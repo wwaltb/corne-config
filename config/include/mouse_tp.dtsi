@@ -80,7 +80,7 @@
 * Input Listener Config
 */
 
-&trackpoint { 
+&trackpoint_listener { 
     input-processors = <&zip_temp_layer MOUSE 500>;
 };
 

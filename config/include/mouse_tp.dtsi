@@ -84,7 +84,7 @@
 
 &mouse_ps2_input_listener {
     status = "okay";
-}
+};
 //&trackpoint_listener {
 //    status = "okay";
 //};

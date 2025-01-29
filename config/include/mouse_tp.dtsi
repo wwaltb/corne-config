@@ -37,9 +37,20 @@
 * Input Listener Config
 */
 
-&trackpoint_listener { 
-    input-processors = <&zip_temp_layer MOUSE 500>;
+&mouse_ps2_input_listener { 
+    // set the layer that will change the mouse behavior from move to scroll
+    // when active
+    scroll-layers = <NUMBER SYMBOL>; 
+    //scroll-layers-reverse-direction-horizontal; 
+
+    layer-toggle = <MOUSE>; 
+    layer-toggle-delay-ms = <25>; 
+    layer-toggle-timeout-ms = <500>; 
 };
+
+//&trackpoint_listener { 
+//    input-processors = <&zip_temp_layer MOUSE 500>;
+//};
 
 /*
 * Mouse Driver Settings
@@ -71,9 +82,12 @@
     status = "okay";
 };
 
-&trackpoint_listener {
+&mouse_ps2_input_listener {
     status = "okay";
-};
+}
+//&trackpoint_listener {
+//    status = "okay";
+//};
 
 #ifdef MOUSE_PS2_DRIVER_UART
 

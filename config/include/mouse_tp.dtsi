@@ -4,9 +4,9 @@
 #include <dt-bindings/zmk/mouse_settings.h>
 #include <behaviors/mouse_keys.dtsi>
 #include <behaviors/mouse_setting.dtsi>
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
+//#include <input/processors.dtsi>
+//#include <dt-bindings/zmk/input_transform.h>
+//#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 /*
 * Key Behaviors to adjust settings

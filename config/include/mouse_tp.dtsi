@@ -69,6 +69,8 @@
     tp-neg-inertia = <6>;
 
     tp-x-invert;
+
+    disable-clicking;
 };
 
 // Enable PS/2 Mouse Devices

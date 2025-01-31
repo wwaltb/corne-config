@@ -36,12 +36,43 @@
 /*
 * Input Listener Config
 */
+/ {
+    input_accelerator_move: input_accelerator_move {
+        status = "okay";
+        compatible = "zmk,input_accelerator";
+
+        acceleration_curve = "sigmoid";
+        acceleration-factor-base = <80>;
+        acceleration-factor-max = <150>;
+        acceleration-factor-rate = <40>;
+        acceleration-start-offset = <5>;
+
+        enable-interval-based-speed;
+        input-default-sending-rate = <PS2_MOUSE_SAMPLING_RATE>;
+    };
+    input_accelerator_scroll: input_accelerator_scroll {
+        status = "okay";
+        compatible = "zmk,input_accelerator";
+
+        acceleration_curve = "scroll";
+        acceleration-factor-base = <60>;
+        acceleration-factor-max = <120>;
+        acceleration-factor-rate = <25>;
+        acceleration-start-offset = <10>;
+        max-speed = <20>;
+        divisor = <20>;
+
+        enable-interval-based-speed;
+        input-default-sending-rate = <PS2_MOUSE_SAMPLING_RATE>;
+    };
+};
 
 &mouse_ps2_input_listener { 
-    // set the layer that will change the mouse behavior from move to scroll
-    // when active
+    move-accelerator = <&input_accelerator_move>;
+    scroll-accelerator = <&input_accelerator_scroll>;
+
     scroll-layers = <NUMBER SYMBOL>; 
-    //scroll-layers-reverse-direction-horizontal; 
+    scroll-layers-reverse-direction-vertical; 
 
     layer-toggle = <MOUSE>; 
     layer-toggle-delay-ms = <25>; 
@@ -59,16 +90,16 @@
 &mouse_ps2 {
     // How sensitive the TP is (Default: 128)
     tp-sensitivity = <155>;
-
     // The maximum mouse movement speed the TP will accelarate to
     // (Default: 97)
     tp-val6-upper-speed = <175>;
-
     // Negative Inertia (Default: 6)
     // Makes the TP feel more responsive and "overshoot" less.
     tp-neg-inertia = <6>;
 
     tp-x-invert;
+
+    sampling-rate = <PS2_MOUSE_SAMPLING_RATE>;
 
     disable-clicking;
 };

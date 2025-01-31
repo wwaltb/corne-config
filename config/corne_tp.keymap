@@ -65,6 +65,15 @@
             require-prior-idle-ms = <180>;
             quick-tap-ms = <380>;
         };
+        mtl: mouse_thumb_layers {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&mkp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <380>;
+        };
     };
 
     keymap {
@@ -136,7 +145,7 @@
                 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                     &trans        &trans        &trans        &trans        &trans             &trans        &trans        &trans        &trans        &trans
                 // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤    ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                                &trans        &trans        &trans             &mkp MCLK     &trans        &trans
+                                                &trans        &trans        &trans             &mtl 1 MCLK   &trans        &trans
                 //                             ╰─────────────┴─────────────┴─────────────╯    ╰─────────────┴─────────────┴─────────────╯
             >;
         };

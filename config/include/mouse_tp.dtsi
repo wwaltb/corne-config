@@ -39,9 +39,9 @@
 / {
     input_accelerator_move: input_accelerator_move {
         status = "okay";
-        compatible = "zmk,input_accelerator";
+        compatible = "zmk,input-accelerator";
 
-        acceleration_curve = "sigmoid";
+        acceleration-curve = "sigmoid";
         acceleration-factor-base = <80>;
         acceleration-factor-max = <150>;
         acceleration-factor-rate = <40>;
@@ -52,9 +52,9 @@
     };
     input_accelerator_scroll: input_accelerator_scroll {
         status = "okay";
-        compatible = "zmk,input_accelerator";
+        compatible = "zmk,input-accelerator";
 
-        acceleration_curve = "scroll";
+        acceleration-curve = "scroll";
         acceleration-factor-base = <60>;
         acceleration-factor-max = <120>;
         acceleration-factor-rate = <25>;

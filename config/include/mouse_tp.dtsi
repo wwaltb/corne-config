@@ -95,7 +95,7 @@
     tp-val6-upper-speed = <175>;
     // Negative Inertia (Default: 6)
     // Makes the TP feel more responsive and "overshoot" less.
-    tp-neg-inertia = <6>;
+    tp-neg-inertia = <10>;
 
     tp-x-invert;
 
